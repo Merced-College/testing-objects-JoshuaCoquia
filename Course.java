@@ -13,8 +13,12 @@ public class Course {
 
 	public Course(String name, double overallGradePercentage, int assignmentCount) { // parameterized constructor
 		this.name = name;
-		this.overallGradePercentage = overallGradePercentage;
-		this.assignmentCount = assignmentCount;
+		this.overallGradePercentage = 0d;
+		this.assignmentCount = 0;
+
+		// Use setters to sanitize parameter inputs
+		setOverallGradePercentage(overallGradePercentage);
+		setAssignmentCount(assignmentCount);
 	}
 
 	// Getters for Course fields
@@ -41,9 +45,9 @@ public class Course {
 
 	public Course setOverallGradePercentage(double overallGradePercentage) {
 		// Assuming that students cannot get above 100% and below 0%
-		if (overallGradePercentage > 100) {
+		if (overallGradePercentage > 100d) {
 			overallGradePercentage = 100d;
-		} else if (overallGradePercentage < 0) {
+		} else if (overallGradePercentage < 0d) {
 			overallGradePercentage = 0d;
 		}
 		this.overallGradePercentage = overallGradePercentage;
@@ -53,7 +57,7 @@ public class Course {
 	public Course setAssignmentCount(int assignmentCount) {
 		// Students cannot have a negative number of assignments, so whenever passed 0
 		// for `assignmentCount`, actually set assignmentCount to 0.
-		if (assignmentCount >= 0) {
+		if (assignmentCount <= 0) {
 			this.assignmentCount = assignmentCount;
 		} else {
 			this.assignmentCount = 0;

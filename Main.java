@@ -40,11 +40,14 @@ public class Main {
 		System.out.println(genericCourse.toString());
 
 		// Test instantiation of Course via parameterized constructor
-		Course CPSC39 = new Course("CPSC-39", 100, 1);
+		Course CPSC39 = new Course("CPSC-39", 100d, 1);
 		System.out.println("\nPrinting Course object instantiated through parameterized constructor");
-		System.out.println(genericCourse.toString());
+		System.out.println(CPSC39.toString());
 
 		// Test Getters/Setters
+
+		// These should be out of bounds and
+		CPSC39.setOverallGradePercentage(10000);
 
 		// TODO: Write tests for Course object
 	}

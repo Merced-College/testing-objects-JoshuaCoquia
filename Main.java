@@ -23,5 +23,10 @@ public class Main {
 		System.out.println("\nPrinting objects after overriding toString():");
 		System.out.println("d2 = " + d2);
 		System.out.println("d3 = " + d3);
+
+		System.out.println("\nMutating public fields directly:");
+		d3.age = 5; // direct write
+		d3.name = "Max"; // direct write
+		System.out.println("After mutation, d3 = " + d3); // uses toString()
 	}
 }

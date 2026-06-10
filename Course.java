@@ -7,7 +7,7 @@ public class Course {
 
 	public Course() { // no-arg constructor
 		this.name = "Course";
-		this.overallGradePercentage = 0; // Assuming that a student starts with a grade of 0.
+		this.overallGradePercentage = 0d; // Assuming that a student starts with a grade of 0.
 		this.assignmentCount = 0;
 	}
 
@@ -39,7 +39,7 @@ public class Course {
 	// I'm returning `this` after each setter to enable method chaining.
 
 	public Course setName(String name) {
-		this.name = name;
+		this.name = name; // No validation needed
 		return this;
 	}
 
@@ -73,6 +73,4 @@ public class Course {
 		// NOTE: My IDE automatically wraps lines at a certain number of characters,
 		// though I don't exactly remember how many.
 	}
-	// TODO: Implement encapsulation and explain validation rule
-	// TODO: Write tests
 }

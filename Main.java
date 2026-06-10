@@ -40,15 +40,47 @@ public class Main {
 		System.out.println(genericCourse.toString());
 
 		// Test instantiation of Course via parameterized constructor
-		Course CPSC39 = new Course("CPSC-39", 100d, 1);
+		Course CPSC39 = new Course("CPSC-39", 99d, 1);
 		System.out.println("\nPrinting Course object instantiated through parameterized constructor");
 		System.out.println(CPSC39.toString());
 
 		// Test Getters/Setters
 
-		// These should be out of bounds and
-		CPSC39.setOverallGradePercentage(10000);
+		System.out.println("\nTesting Getters/Setters");
 
-		// TODO: Write tests for Course object
+		CPSC39.setOverallGradePercentage(102d); // Scores >100 are disallowed; grade should update to 100d
+		System.out.println("Grade Percentage: " + CPSC39.getOverallGradePercentage() + "%");
+		// Expected:
+		// New Grade Percentage: 100.0%
+
+		CPSC39.setOverallGradePercentage(-1d); // Scores <0 are disallowed; grade should update to 0d
+		System.out.println("Grade Percentage: " + CPSC39.getOverallGradePercentage() + "%");
+		// Expected:
+		// New Grade Percentage: 0.0%
+
+		CPSC39.setOverallGradePercentage(50d); // Valid score
+		System.out.println("Grade Percentage: " + CPSC39.getOverallGradePercentage() + "%");
+		// Expected:
+		// New Grade Percentage: 50.0%
+
+		CPSC39.setAssignmentCount(-1); // Assignment Counts <0 are disallowed; should update to 0
+		System.out.println("Assignment Count: " + CPSC39.getAssignmentCount());
+		// Expected:
+		// Assignment Count: 0
+
+		CPSC39.setAssignmentCount(999); // Valid assignment count
+		System.out.println("Assignment Count: " + CPSC39.getAssignmentCount());
+		// Expected:
+		// Assignment Count: 999
+
+		CPSC39.setName("CSE 030"); // Here's the course I'm trying to get credit for at UC Merced!
+		System.out.println("Course Name: " + CPSC39.getName());
+		// Expected:
+		// Course Name: CSE 030
+
+		// Method chaining! (Just for fun)
+		CPSC39.setName("CPSC-39").setAssignmentCount(1).setOverallGradePercentage(99d);
+		System.out.println("\n'Reset' Object:\n" + CPSC39.toString());
+
 	}
 }

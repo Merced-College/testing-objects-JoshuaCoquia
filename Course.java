@@ -57,7 +57,7 @@ public class Course {
 	public Course setAssignmentCount(int assignmentCount) {
 		// Students cannot have a negative number of assignments, so whenever passed 0
 		// for `assignmentCount`, actually set assignmentCount to 0.
-		if (assignmentCount <= 0) {
+		if (assignmentCount >= 0) {
 			this.assignmentCount = assignmentCount;
 		} else {
 			this.assignmentCount = 0;

@@ -1,16 +1,14 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=24074024)
 # testingObjectsWithJava
 
-Write your answers to your reflection questions here. Write your name, the date and the answers.
-
 Joshua Coquia
 
 June 9, 2026
 
-[Checkpoint Answers](#answers)
-[Reflection](#reflection)
+* [Checkpoint Answers](#checkpoints)
+* [Reflection](#reflection)
 
-## Answers
+## Checkpoints
 
 * **Checkpoint Q1:** Printing an object with no `toString` methods shows the class name and a hex hash. This is because Java's default `Object.toString()` method implementation for a class returns that class' name plus its hex hash.
 
@@ -53,5 +51,3 @@ Main.java:4: error: constructor Dog in class Dog cannot be applied to given type
 * **Reflection 4:** Add `@Override` to `toString()` to denote that an parent class' method is being superseded in a child class, throwing errors when a method in the child is declared incorrectly and therefore not actually overriding a method from the parent class.
     * https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Override.html
 * **Reflection 5:** Encapsulation is preferred over public fields because it enables the developer to abstract away fields, only allowing read/write access to whatever the end-user (in this case another developer or even the same developer) needs. This is good practice to avoid suprises/inconsistencies later on in larger codebases. As an example of a validation rule that can be added to a setter, some values, like the of a given object being tracked, cannot be negative, so the setter may have a `if (value < 0)` check where it can either throw an error or quietly set `value = 0` before setting the private field.
-
-Make sure to push your code to your repo!

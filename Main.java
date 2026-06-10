@@ -39,6 +39,13 @@ public class Main {
 		System.out.println("\nPrinting Course object");
 		System.out.println(genericCourse.toString());
 
+		// Test instantiation of Course via parameterized constructor
+		Course CPSC39 = new Course("CPSC-39", 100, 1);
+		System.out.println("\nPrinting Course object instantiated through parameterized constructor");
+		System.out.println(genericCourse.toString());
+
+		// Test Getters/Setters
+
 		// TODO: Write tests for Course object
 	}
 }

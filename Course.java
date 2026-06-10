@@ -17,15 +17,6 @@ public class Course {
 		this.assignmentCount = assignmentCount;
 	}
 
-	public Course(String name, int overallGradePercentage, int assignmentCount) { // parameterized constructor
-		// If the user accidentally sets the overallGradePercentage as an int,
-		// automatically convert it for them (I did this and briefly got confused about
-		// why my previous paramterized constructor didn't work)
-		this.name = name;
-		this.overallGradePercentage = (double) overallGradePercentage;
-		this.assignmentCount = assignmentCount;
-	}
-
 	// Getters for Course fields
 
 	public String getName() {

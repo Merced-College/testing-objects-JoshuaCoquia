@@ -17,8 +17,14 @@ public class Course {
 		this.assignmentCount = assignmentCount;
 	}
 
-	// TODO: Print this object using `toString` before using @override
-	// TODO: @override `toString()` and reprint the object
+	@Override
+	public String toString() { // Override `toString`
+		// Matching the format shown in the Dog object's `toString` method.
+		return "Course{name=\"" + this.name + "\", overallGradePercentage=" + this.overallGradePercentage
+				+ ", assignmentCount=" + this.assignmentCount + "}";
+		// NOTE: My IDE automatically wraps lines at a certain number of characters,
+		// though I don't exactly remember how many.
+	}
 	// TODO: Implement encapsulation and explain validation rule
 	// TODO: Write tests
 }

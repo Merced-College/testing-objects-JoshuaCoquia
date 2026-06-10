@@ -20,9 +20,6 @@ public class Dog {
 		return "Dog{name='" + name + "', age=" + age + ", breed='" + breed + "'}";
 	}
 
-	// NOTE: I'm using a linter that automatically formats files when I save them,
-	// hence why these methods may look formatted differently than the code snippets
-	// provided in the lab directions.
 	public String getName() {
 		return name;
 	}
@@ -37,8 +34,9 @@ public class Dog {
 
 	public void setAge(int age) {
 		// simple guard (optional)
-		if (age >= 0)
+		if (age >= 0) {
 			this.age = age;
+		}
 	}
 
 	public String getBreed() {

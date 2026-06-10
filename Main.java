@@ -32,10 +32,12 @@ public class Main {
 		System.out.println("d3 now = " + d3);
 
 		// NOTE: Start student defined Course object related code below
+		// As an aside, do we get to go over unit tests in this course?
 
+		// Test instantiation of Course and printing of Course's `toString()` method
 		Course genericCourse = new Course();
 		System.out.println("\nPrinting Course object");
-		System.out.println(genericCourse);
+		System.out.println(genericCourse.toString());
 
 		// TODO: Write tests for Course object
 	}

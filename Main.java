@@ -30,5 +30,7 @@ public class Main {
 		d3.setBreed("Border Collie");
 		System.out.println("d3 age via getter = " + d3.getAge());
 		System.out.println("d3 now = " + d3);
+
+		// TODO: Write tests for Course object
 	}
 }

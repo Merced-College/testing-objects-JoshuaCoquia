@@ -1,5 +1,5 @@
-//write your code here
-
 public class Dog {
-	// Intentionally empty for now: no fields, no constructors, no methods.
+	public String name;
+	public int age;
+	public String breed;
 }

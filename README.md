@@ -35,4 +35,6 @@ Main.java:4: error: constructor Dog in class Dog cannot be applied to given type
 
 * **Checkpoint Q3:** The new constructors allow the class to be assigned values upon initialization, with more sensible, dev provided defaults than the default values for each variable that Java provides.
 
+* **Checkpoint Q4:** Between the two steps, the output of `System.out.println(d1);` and other Dog objects became more useful after overriding the `Dog.toString()` method because it gave relevant values for the `Dog` object's instance as opposed to simply printing out information about the literal object's instance itself. `@Override` is useful because it enables a class to override default Java behavior; in this case, it enables the overriding of the `toString()` method.
+
 Make sure to push your code to your repo!

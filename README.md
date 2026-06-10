@@ -37,4 +37,6 @@ Main.java:4: error: constructor Dog in class Dog cannot be applied to given type
 
 * **Checkpoint Q4:** Between the two steps, the output of `System.out.println(d1);` and other Dog objects became more useful after overriding the `Dog.toString()` method because it gave relevant values for the `Dog` object's instance as opposed to simply printing out information about the literal object's instance itself. `@Override` is useful because it enables a class to override default Java behavior; in this case, it enables the overriding of the `toString()` method.
 
+* **Checkpoint Q5:** Private fields can be preferred over public fields in most situations because it enables a developer to restrict those private fields to have certain values to either avoid undefined/unexpected behavior or disallow certain values. For example, a count of a user's `itemsOrdered` at a store should always be greater than or equal to 0, since a user cannot purchase a negative number of items. The setter `setItemsOrdered` would accept an int and force the value to be `>= 0` before setting the actual value of `itemsOrdered`.
+
 Make sure to push your code to your repo!
